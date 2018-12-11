@@ -42,12 +42,12 @@ public class CalculatorJFrame extends JFrame {
 	/**
 	 * Den är en textfield för att vissa function.
 	 */
-	private JTextField txtDisplay1;
+	protected JTextField txtDisplay1;
 
 	/**
 	 * Den är en textfield för att vissa resultat av function.
 	 */
-	private JTextField txtDisplay2;
+	protected JTextField txtDisplay2;
 
 	/**
 	 * det är integer operation som vissar att vilken Basic Opreation påverkar .
@@ -85,9 +85,13 @@ public class CalculatorJFrame extends JFrame {
 	 * en boolean variable.
 	 */
 	private boolean b = false;
+	
+
 
 	/**
 	 * Skapar frame.
+	 * 
+	 * 
 	 */
 	public CalculatorJFrame() {
 
@@ -985,7 +989,7 @@ public class CalculatorJFrame extends JFrame {
 	 * @param SecondNumber
 	 *            Double
 	 * 
-	 * @param Operation
+	 * @param ad
 	 *            integer
 	 * 
 	 * 
