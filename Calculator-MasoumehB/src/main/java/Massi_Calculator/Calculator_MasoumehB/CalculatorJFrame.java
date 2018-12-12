@@ -37,8 +37,6 @@ public class CalculatorJFrame extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private static final String Red = null;
-
 	/**
 	 * Den är en textfield för att vissa function.
 	 */
@@ -55,16 +53,14 @@ public class CalculatorJFrame extends JFrame {
 	 * 
 	 */
 
-	public int Operation;
+	public int Operation = 0;
 	/**
-	* AdvOperation 1 är exp, AdvOperation 2 är sin,
-	 * AdvOperation 3 är cos, AdvOperation 4 är tan, AdvOperation 5 är x^2,
-	 * AdvOperation 6 är log, AdvOperation 7 är sqrt, AdvOperation 8 är pi,
-	 * AdvOperation 9 är e,
+	 * AdvOperation 1 är exp, AdvOperation 2 är sin, AdvOperation 3 är cos,
+	 * AdvOperation 4 är tan, AdvOperation 5 är x^2, AdvOperation 6 är log,
+	 * AdvOperation 7 är sqrt, AdvOperation 8 är pi, AdvOperation 9 är e,
 	 */
-	
-	public int ad;
-	public int AdvOperation;
+
+	public int AdvOperation = 0;
 
 	/**
 	 * Det är String för txtDisplay.
@@ -85,11 +81,9 @@ public class CalculatorJFrame extends JFrame {
 	 * en boolean variable.
 	 */
 	private boolean b = false;
-	
-
 
 	/**
-	 * Skapar frame.
+	 * Skapar ett frame med 29 button och 2 textdisplay.
 	 * 
 	 * 
 	 */
@@ -100,7 +94,7 @@ public class CalculatorJFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 521, 473);
 		JPanel contentPane = new JPanel();
-		contentPane.setBackground(Color.BLACK);
+		contentPane.setBackground(new Color(0, 0, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
@@ -305,9 +299,7 @@ public class CalculatorJFrame extends JFrame {
 
 			public void actionPerformed(ActionEvent e) {
 
-			
-				
-				equal(ad);
+				equal(Operation);
 			}
 
 		});
@@ -790,7 +782,7 @@ public class CalculatorJFrame extends JFrame {
 	/**
 	 * Den method tar en integer parameter och skriver nummer i txtdisplay2.
 	 * 
-	 * 
+	 * @param number
 	 */
 	public void skrivtal(int number) {
 
@@ -914,11 +906,6 @@ public class CalculatorJFrame extends JFrame {
 	 * @param op
 	 *            character
 	 * 
-	 * @param Operation
-	 *            Integer value.
-	 * 
-	 * @param FirstNumber
-	 *            : First Number value double.
 	 * 
 	 * 
 	 * 
@@ -926,148 +913,156 @@ public class CalculatorJFrame extends JFrame {
 
 	public void BasicOperation(char op) {
 
-		if (txtDisplay1.getText().length()==0&& txtDisplay2.getText().length()==0) {
-			
+		if (txtDisplay1.getText().length() == 0 && txtDisplay2.getText().length() == 0) {
+
 			txtDisplay1.setText("");
 			txtDisplay2.setText("");
-		}else if (txtDisplay1.getText().length()==0&& txtDisplay2.getText().length()>0){
-			st = txtDisplay2.getText();
-			txtDisplay1.setText(st);
-			FirstNumber = Double.parseDouble(st);
-		
-		
+		} else if (txtDisplay1.getText().length() == 0 && txtDisplay2.getText().length() > 0) {
 
-		switch (op) {
-		case '+':
-			txtDisplay1.setText(FirstNumber + " + ");
-			Operation = 1; // plus
-			txtDisplay2.setText("");
-
-			break;
-		case '-':
-
-			txtDisplay1.setText(FirstNumber + " - ");
-			Operation = 2; // minus
-			txtDisplay2.setText("");
-
-			break;
-		case '*':
-			txtDisplay1.setText(FirstNumber + " * ");
-			Operation = 3; // Multiply
-			txtDisplay2.setText("");
-
-			break;
-		case '/':
-			txtDisplay1.setText(FirstNumber + " / ");
-			Operation = 4; // Division
-			txtDisplay2.setText("");
-
-			break;
-		case '%':
-			txtDisplay1.setText(FirstNumber + " % ");
-			Operation = 5; // Modulus opretion
-			txtDisplay2.setText("");
-
-			break;
-		default:
-			txtDisplay2.setText("");
+			txtDisplay1.setText(txtDisplay2.getText());
 
 		}
+		st = txtDisplay2.getText();
+		if (st.length() > 0) {
+
+			switch (op) {
+			case '+':
+				FirstNumber = Double.parseDouble(st);
+				txtDisplay1.setText(FirstNumber + " + ");
+				Operation = 1; // plus
+
+				txtDisplay2.setText("");
+
+				break;
+			case '-':
+				FirstNumber = Double.parseDouble(st);
+
+				txtDisplay1.setText(FirstNumber + " - ");
+				Operation = 2; // minus
+				txtDisplay2.setText("");
+
+				break;
+			case '*':
+				FirstNumber = Double.parseDouble(st);
+				txtDisplay1.setText(FirstNumber + " * ");
+				Operation = 3; // Multiply
+				txtDisplay2.setText("");
+
+				break;
+			case '/':
+				FirstNumber = Double.parseDouble(st);
+				txtDisplay1.setText(FirstNumber + " / ");
+				Operation = 4; // Division
+				txtDisplay2.setText("");
+
+				break;
+			case '%':
+				FirstNumber = Double.parseDouble(st);
+				txtDisplay1.setText(FirstNumber + " % ");
+				Operation = 5; // Modulus opretion
+				txtDisplay2.setText("");
+
+				break;
+			default:
+				txtDisplay2.setText("");
+
+			}
 		}
+
 	}
 
 	/**
 	 * Den method anropar 4 metoder från class CalculatorBasicOperations och ett
 	 * method från class CalculatorAdvancedOperations. Den kontrolerar vilken
-	 * opreation påverkas . Operation 1 är plus , Operation 2 är minus,
-	 * Operation 3 är multiply, Operation 4 är division , Operation 5 är
-	 * Modulus. sedan det räknar resultaten och skriver i txtDisplay2.
+	 * opreation påverkas sedan det räknar resultaten och skriver i txtDisplay2.
 	 * 
-	 * @param FirstNumber
-	 *            Double
+	 * Operation =1 plus ,Operation =2 minus, Operation =3 multiply, Operation
+	 * =4 division , Operation=5 Modulus
 	 * 
-	 * @param SecondNumber
-	 *            Double
 	 * 
-	 * @param ad
+	 * @param Operation
 	 *            integer
 	 * 
 	 * 
 	 */
 
-	public void equal(int ad) {
-	  if (ad>0){
-		  AdvancedOperation(ad);
-	  }else if (Operation>0){
-			st = txtDisplay2.getText();
-			CalculatorBasicOperations cb = new CalculatorBasicOperations();
-			CalculatorAdvancedOperations ca = new CalculatorAdvancedOperations();
-	
+	public void equal(int Operation) {
+
+		CalculatorBasicOperations cb = new CalculatorBasicOperations();
+		CalculatorAdvancedOperations ca = new CalculatorAdvancedOperations();
+
+		st = txtDisplay2.getText();
+
+		if ((FirstNumber == 0 && SecondNumber == 0) || (st.length() == 0)) {
+
+			txtDisplay1.setText("");
+			txtDisplay2.setText("");
+			Operation = 0;
+
+		}
+
+		switch (Operation) {
+
+		case 1:
 			SecondNumber = Double.parseDouble(st);
-			String s = txtDisplay1.getText();
-	
-			if (s.length() == 0) {
-				txtDisplay1.setText("");
-			} else {
-				txtDisplay1.setText(txtDisplay1.getText() + st);
-			}
-	
-			/**
-			 * Operation =1 plus ,Operation =2 minus, Operation =3 multiply,
-			 * Operation =4 division , Operation=5 Modulus
-			 * 
-			 */
-	
-			switch (Operation) {
-			case 1:
-				txtDisplay1.setText(FirstNumber + " + " + SecondNumber);
-				txtDisplay2.setText("" + cb.addition(FirstNumber, SecondNumber));
-				break;
-			case 2:
-				txtDisplay1.setText(FirstNumber + " - " + SecondNumber);
-				txtDisplay2.setText("" + cb.subtraction(FirstNumber, SecondNumber));
-	
-				break;
-			case 3:
-				txtDisplay1.setText(FirstNumber + " * " + SecondNumber);
-				txtDisplay2.setText("" + cb.multiplikation(FirstNumber, SecondNumber));
-	
-				break;
-			case 4:
-				if (SecondNumber == 0) {
-					JOptionPane.showMessageDialog(null, " You can not perform a division by zero");
-					txtDisplay1.setText("");
-					txtDisplay2.setText("");
-	
-				} else {
-					txtDisplay1.setText(FirstNumber + " / " + SecondNumber);
-					txtDisplay2.setText("" + cb.dividera(FirstNumber, SecondNumber));
-				}
-				break;
-			case 5:
-				if (SecondNumber == 0) {
-					JOptionPane.showMessageDialog(null, " You can not perform a division by zero");
-					txtDisplay1.setText("");
-					txtDisplay2.setText("");
-				} else {
-					txtDisplay1.setText(FirstNumber + " % " + SecondNumber);
-					txtDisplay2.setText("" + ca.modulus(FirstNumber, SecondNumber));
-				}
-				break;
-				
-			default:
-				txtDisplay1.setText("");
-				txtDisplay2.setText("");
-	
-	
-			}
-	
+			txtDisplay1.setText(FirstNumber + " + " + SecondNumber);
+			txtDisplay2.setText("" + cb.addition(FirstNumber, SecondNumber));
 			FirstNumber = 0;
 			SecondNumber = 0;
-			Operation=0;
-			
+			Operation = 0;
+			break;
+		case 2:
+			SecondNumber = Double.parseDouble(st);
+			txtDisplay1.setText(FirstNumber + " - " + SecondNumber);
+			txtDisplay2.setText("" + cb.subtraction(FirstNumber, SecondNumber));
+			FirstNumber = 0;
+			SecondNumber = 0;
+			Operation = 0;
+			break;
+		case 3:
+			SecondNumber = Double.parseDouble(st);
+			txtDisplay1.setText(FirstNumber + " * " + SecondNumber);
+			txtDisplay2.setText("" + cb.multiplikation(FirstNumber, SecondNumber));
+			FirstNumber = 0;
+			SecondNumber = 0;
+			Operation = 0;
+			break;
+		case 4:
+			SecondNumber = Double.parseDouble(st);
+			if (SecondNumber == 0) {
+				JOptionPane.showMessageDialog(null, " You can not perform a division by zero");
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+
+			} else {
+				txtDisplay1.setText(FirstNumber + " / " + SecondNumber);
+				txtDisplay2.setText("" + cb.dividera(FirstNumber, SecondNumber));
 			}
-	 
+			FirstNumber = 0;
+			SecondNumber = 0;
+			Operation = 0;
+			break;
+		case 5:
+			SecondNumber = Double.parseDouble(st);
+			if (SecondNumber == 0) {
+				JOptionPane.showMessageDialog(null, " You can not perform a division by zero");
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+			} else {
+				txtDisplay1.setText(FirstNumber + " % " + SecondNumber);
+				txtDisplay2.setText("" + ca.modulus(FirstNumber, SecondNumber));
+			}
+			FirstNumber = 0;
+			SecondNumber = 0;
+			Operation = 0;
+			break;
+
+		default:
+			txtDisplay1.setText("");
+			txtDisplay2.setText("");
+
+		}
+
 	}
 
 	/**
@@ -1076,8 +1071,7 @@ public class CalculatorJFrame extends JFrame {
 	 * Den method tar integer koder från AdvOperation och använda ett switch
 	 * case föratt välja rätt AdvancedOperation sedan i varje statment tar value
 	 * av double FirstNumber från txtDisplay2 och anroppar methoden från class
-	 * AdvancedOprations. 
-	 * AdvOperation 1 är exp, AdvOperation 2 är sin,
+	 * AdvancedOprations. AdvOperation 1 är exp, AdvOperation 2 är sin,
 	 * AdvOperation 3 är cos, AdvOperation 4 är tan, AdvOperation 5 är x^2,
 	 * AdvOperation 6 är log, AdvOperation 7 är sqrt, AdvOperation 8 är pi,
 	 * AdvOperation 9 är e,
@@ -1094,173 +1088,167 @@ public class CalculatorJFrame extends JFrame {
 
 		CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();
 		st = txtDisplay2.getText();
-	   	ad=AdvOperation;
-			switch (AdvOperation) {
-			case (1):
-				if (st.length() == 0) {
-					txtDisplay1.setText("exp(" );
-					txtDisplay2.setText("");
-					ad=AdvOperation;
-					
-				} else {
+		// ad=AdvOperation;
+		switch (AdvOperation) {
+		case (1):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+				// ad=AdvOperation;
 
-					FirstNumber = Double.parseDouble(st);
+			} else {
 
+				FirstNumber = Double.parseDouble(st);
 
 				txtDisplay2.setText("" + cao.EXP(FirstNumber));
 				txtDisplay1.setText("exp(" + FirstNumber + ")");
 				FirstNumber = 0;
-				}
-				break;
-			case (2):
-				if (st.length() == 0) {
-					txtDisplay1.setText("sin (");
-					txtDisplay2.setText("");
-					
-				} else {
+			}
+			break;
+		case (2):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
 
-					FirstNumber = Double.parseDouble(st);
+			} else {
 
+				FirstNumber = Double.parseDouble(st);
 
 				txtDisplay2.setText("" + cao.sin(FirstNumber));
 				txtDisplay1.setText("sin (" + FirstNumber + ")");
 				FirstNumber = 0;
-				}
+			}
 
-				break;
-			case (3):
-				
-				if (st.length() == 0) {
-					txtDisplay1.setText("cos (");
-					txtDisplay2.setText("");
-					
-				} else {
+			break;
+		case (3):
 
-					FirstNumber = Double.parseDouble(st);
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
 
 				txtDisplay2.setText("" + cao.cos(FirstNumber));
 				txtDisplay1.setText("cos ( " + FirstNumber + " )");
 				FirstNumber = 0;
-				}
+			}
 
-				break;
-			case (4):
-				if (st.length() == 0) {
-					txtDisplay1.setText("tan (");
-					txtDisplay2.setText("");
-				
-				} else {
+			break;
+		case (4):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
 
-					FirstNumber = Double.parseDouble(st);
+			} else {
 
+				FirstNumber = Double.parseDouble(st);
 
 				txtDisplay2.setText("" + cao.tan(FirstNumber));
 				txtDisplay1.setText("tan (" + FirstNumber + ")");
 				FirstNumber = 0;
-				}
+			}
 
-				break;
-			case (5):
-				if (st.length() == 0) {
-					txtDisplay1.setText("X^2");
-					txtDisplay2.setText("");
-				
-				} else {
+			break;
+		case (5):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
 
-					FirstNumber = Double.parseDouble(st);
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
 
 				txtDisplay2.setText("" + cao.xx(FirstNumber));
 				txtDisplay1.setText("" + FirstNumber + " ^2");
 				FirstNumber = 0;
-				}
+			}
 
-				break;
-			case (6):
-				if (st.length() == 0) {
-					txtDisplay1.setText("log (");
-					txtDisplay2.setText("");
-					
-				} else {
-
-					 FirstNumber = Double.parseDouble(st);
-
-				
-				     if (FirstNumber>0){
-				        txtDisplay2.setText("" + cao.LOG(FirstNumber));
-				        txtDisplay1.setText("log (" + FirstNumber + ")");
-				        
-			         }else {
-                  
-                 	         txtDisplay1.setText("log ( " + FirstNumber + " )");
-  			    	         txtDisplay2.setText("");
-  			                 JOptionPane.showMessageDialog(null, " Result undefined");
-  			                			     
-  			                 txtDisplay1.setText("");
-  			                 }
-  			                 FirstNumber = 0;
-				}
-				break;
-			case (7):
-				
-				if (st.length() == 0) {
-					txtDisplay1.setText("sqrt(");
-					txtDisplay2.setText("");
-					
-				} else {
-
-						FirstNumber = Double.parseDouble(st);
-	
-		                if (FirstNumber>0 || FirstNumber==0 ){
-						    txtDisplay2.setText("" + cao.sqr(FirstNumber));
-						    txtDisplay1.setText("sqr ( " + FirstNumber + " )");
-		                }else {
-		                	
-		                	txtDisplay1.setText("sqr ( " + FirstNumber + " )");
-		    				txtDisplay2.setText("");
-		    				JOptionPane.showMessageDialog(null, " Result undefined");
-		    				txtDisplay1.setText("");
-		                      }
-		                FirstNumber = 0;
-			      }
-				break;
-			case (8):
-				if (st.length() == 0) {
-					txtDisplay1.setText("PI *");
-					txtDisplay2.setText("");
-				
-				} else {
-
-					FirstNumber = Double.parseDouble(st);
-
-	
-					txtDisplay2.setText("" + cao.PI(FirstNumber));
-					txtDisplay1.setText("PI * " + FirstNumber);
-					 FirstNumber = 0;
-				}
-				break;
-			case (9):
-				if (st.length() == 0) {
-					txtDisplay1.setText("e *");
-					txtDisplay2.setText("");
-					
-				} else {
-
-					FirstNumber = Double.parseDouble(st);
-
-
-					txtDisplay2.setText("" + cao.E(FirstNumber));
-					txtDisplay1.setText("e * " + FirstNumber);
-					 FirstNumber = 0;
-				}
-
-				break;
-			default:
+			break;
+		case (6):
+			if (st.length() == 0) {
 				txtDisplay1.setText("");
 				txtDisplay2.setText("");
 
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
+
+				if (FirstNumber > 0) {
+					txtDisplay2.setText("" + cao.LOG(FirstNumber));
+					txtDisplay1.setText("log (" + FirstNumber + ")");
+
+				} else {
+
+					txtDisplay1.setText("log ( " + FirstNumber + " )");
+					txtDisplay2.setText("");
+					JOptionPane.showMessageDialog(null, " Result undefined");
+
+					txtDisplay1.setText("");
+				}
+				FirstNumber = 0;
 			}
-	//	}
-	//	FirstNumber = 0;
+			break;
+		case (7):
+
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
+
+				if (FirstNumber > 0 || FirstNumber == 0) {
+					txtDisplay2.setText("" + cao.sqr(FirstNumber));
+					txtDisplay1.setText("sqr ( " + FirstNumber + " )");
+				} else {
+
+					txtDisplay1.setText("sqr ( " + FirstNumber + " )");
+					txtDisplay2.setText("");
+					JOptionPane.showMessageDialog(null, " Result undefined");
+					txtDisplay1.setText("");
+				}
+				FirstNumber = 0;
+			}
+			break;
+		case (8):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
+
+				txtDisplay2.setText("" + cao.PI(FirstNumber));
+				txtDisplay1.setText("PI * " + FirstNumber);
+				FirstNumber = 0;
+			}
+			break;
+		case (9):
+			if (st.length() == 0) {
+				txtDisplay1.setText("");
+				txtDisplay2.setText("");
+
+			} else {
+
+				FirstNumber = Double.parseDouble(st);
+
+				txtDisplay2.setText("" + cao.E(FirstNumber));
+				txtDisplay1.setText("e * " + FirstNumber);
+				FirstNumber = 0;
+			}
+
+			break;
+		default:
+			txtDisplay1.setText("");
+			txtDisplay2.setText("");
+
+		}
+		// }
+		// FirstNumber = 0;
 
 	}
 
@@ -1324,6 +1312,7 @@ public class CalculatorJFrame extends JFrame {
 			StringBuilder back = new StringBuilder(txtDisplay2.getText());
 			back.deleteCharAt(Length - 1);
 			store = back.toString();
+			txtDisplay1.setText("");
 			txtDisplay2.setText(store);
 		}
 
@@ -1341,7 +1330,7 @@ public class CalculatorJFrame extends JFrame {
 
 		if (b == true) {
 			if (s2.length() == 0) {
-				txtDisplay2.setText(s2 );
+				txtDisplay2.setText(s2);
 				b = false;
 			} else {
 

@@ -6,6 +6,10 @@ public class CalculatorMain {
 	
 /**
  * The main method of this Calculator application
+ * det fins ett object från calculatorJFrame och fixar platsen i frame och koden som ta handom error.
+ * 
+ * 
+ * 
  * 
  */
 
