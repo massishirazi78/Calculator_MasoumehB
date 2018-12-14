@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>39/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Dec 14 11:40:51 CET 2018</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (403 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testCosN()'><b>testCosN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testCosN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testCosP()'><b>testCosP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testCosP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testCosZero()'><b>testCosZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testCosZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testEN()'><b>testEN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testEN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testEP()'><b>testEP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testEP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testEZero()'><b>testEZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testEZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testExpN()'><b>testExpN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testExpN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testExpP()'><b>testExpP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testExpP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testExpZero()'><b>testExpZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testExpZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testModulusN()'><b>testModulusN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testModulusN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testModulusP()'><b>testModulusP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testModulusP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testModulusZeroo()'><b>testModulusZeroo</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testModulusZeroo(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testPIP()'><b>testPIP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testPIP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testPiN()'><b>testPiN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testPiN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testPiP()'><b>testPiP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testPiP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testSinN()'><b>testSinN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testSinN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testSinP()'><b>testSinP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testSinP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testSinZ()'><b>testSinZ</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testSinZ(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testSqrtP()'><b>testSqrtP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testSqrtZero()'><b>testSqrtZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testSqrtZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testTanN()'><b>testTanN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testTanN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testTanP()'><b>testTanP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testTanP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testTanZero()'><b>testTanZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testTanZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testadditionNegativ()'><b>testadditionNegativ</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionNegativ(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testadditionPosetiv()'><b>testadditionPosetiv</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionPosetiv(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testadditionzero()'><b>testadditionzero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testadditionzero(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testdividera()'><b>testdividera</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testdividera(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testdivideraPos()'><b>testdivideraPos</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testdivideraPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testdivideraZero()'><b>testdivideraZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testdivideraZero(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testlogP()'><b>testlogP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testlogP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testmultiplikation()'><b>testmultiplikation</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplikation(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testmultiplikationNeg()'><b>testmultiplikationNeg</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplikationNeg(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testmultiplikationPos()'><b>testmultiplikationPos</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testmultiplikationPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testsubtraction()'><b>testsubtraction</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtraction(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testsubtractionNeg()'><b>testsubtractionNeg</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtractionNeg(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest.testsubtractionPos()'><b>testsubtractionPos</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testsubtractionPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testxxN()'><b>testxxN</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testxxN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testxxP()'><b>testxxP</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testxxP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+<tr>
+<td title='Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest.testxxZero()'><b>testxxZero</b><br>Test class: Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest</td>
+<td></td>
+<td>0</td>
+<td>testxxZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)</td></tr>
+</table><p>
+</body>
+</html>

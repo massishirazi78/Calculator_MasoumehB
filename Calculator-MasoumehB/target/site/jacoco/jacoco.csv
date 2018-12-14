@@ -1,0 +1,35 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorBasicOperations,0,27,0,0,0,5,0,5,0,5
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame,2527,0,109,0,448,0,76,0,9,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorMain.new Runnable() {...},18,0,0,0,8,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorAdvancedOperations,0,43,0,0,0,11,0,11,0,11
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorMain,8,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},13,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Calculator-MasoumehB,Massi_Calculator.Calculator_MasoumehB,CalculatorJFrame.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0

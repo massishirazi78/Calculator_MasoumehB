@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorJFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculator-MasoumehB</a> &gt; <a href="index.source.html" class="el_package">Massi_Calculator.Calculator_MasoumehB</a> &gt; <span class="el_source">CalculatorJFrame.java</span></div><h1>CalculatorJFrame.java</h1><pre class="source lang-java linenums">package Massi_Calculator.Calculator_MasoumehB;
+
+/**
+ * Date 2018-12-08
+ * Det är en Claculator med 14 Opretion.
+ * @author Massi
+ *@version 1.0
+ */
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.SystemColor;
+
+/**
+ * 
+ * 
+ * det är class CalculatorJFrame som arv från JFrame .
+ *
+ */
+
+public class CalculatorJFrame extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Den är en textfield för att vissa function.
+	 */
+	protected JTextField txtDisplay1;
+
+	/**
+	 * Den är en textfield för att vissa resultat av function.
+	 */
+	protected JTextField txtDisplay2;
+
+	/**
+	 * det är integer operation som vissar att vilken Basic Opreation påverkar .
+	 * Operation 1 är +, Operation 2 är -, Operation 3 är *, Operation 4 är /,
+	 * 
+	 */
+
+<span class="nc" id="L56">	public int Operation = 0;</span>
+	/**
+	 * AdvOperation 1 är exp, AdvOperation 2 är sin, AdvOperation 3 är cos,
+	 * AdvOperation 4 är tan, AdvOperation 5 är x^2, AdvOperation 6 är log,
+	 * AdvOperation 7 är sqrt, AdvOperation 8 är pi, AdvOperation 9 är e,
+	 */
+
+<span class="nc" id="L63">	public int AdvOperation = 0;</span>
+
+	/**
+	 * Det är String för txtDisplay.
+	 */
+	private String st;
+
+	/**
+	 * ett publice double value för första nummer.
+	 */
+<span class="nc" id="L73">	public double FirstNumber = 0;</span>
+
+	/**
+	 * ett publice double value för andra nummer.
+	 */
+<span class="nc" id="L78">	public double SecondNumber = 0;</span>
+
+	/**
+	 * en boolean variable.
+	 */
+<span class="nc" id="L83">	private boolean b = false;</span>
+
+	/**
+	 * Skapar ett frame med 29 button och 2 textdisplay.
+	 * 
+	 * 
+	 */
+<span class="nc" id="L90">	public CalculatorJFrame() {</span>
+
+<span class="nc" id="L92">		setResizable(false);</span>
+<span class="nc" id="L93">		setTitle(&quot;CALCULATOR&quot;);</span>
+<span class="nc" id="L94">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L95">		setBounds(100, 100, 521, 473);</span>
+<span class="nc" id="L96">		JPanel contentPane = new JPanel();</span>
+<span class="nc" id="L97">		contentPane.setBackground(new Color(0, 0, 128));</span>
+<span class="nc" id="L98">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+<span class="nc" id="L99">		setContentPane(contentPane);</span>
+
+		/**
+		 * Skapar Button 0.
+		 */
+
+<span class="nc" id="L105">		JButton btn0 = new JButton(&quot;0&quot;);</span>
+<span class="nc" id="L106">		btn0.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L107">		btn0.setBounds(196, 350, 60, 45);</span>
+<span class="nc" id="L108">		btn0.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L116">				skrivtal(0);</span>
+<span class="nc" id="L117">			}</span>
+		});
+
+		/**
+		 * Skapar Button 1.
+		 */
+<span class="nc" id="L123">		JButton btn1 = new JButton(&quot;1&quot;);</span>
+<span class="nc" id="L124">		btn1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L125">		btn1.setBounds(196, 286, 60, 45);</span>
+<span class="nc" id="L126">		btn1.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L134">				skrivtal(1);</span>
+<span class="nc" id="L135">			}</span>
+		});
+
+		/**
+		 * Skapar Button 2.
+		 */
+<span class="nc" id="L141">		JButton btn2 = new JButton(&quot;2&quot;);</span>
+<span class="nc" id="L142">		btn2.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L143">		btn2.setBounds(273, 286, 60, 45);</span>
+<span class="nc" id="L144">		btn2.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L152">				skrivtal(2);</span>
+
+<span class="nc" id="L154">			}</span>
+		});
+
+		/**
+		 * Skapar Button 3.
+		 */
+<span class="nc" id="L160">		JButton btn3 = new JButton(&quot;3&quot;);</span>
+<span class="nc" id="L161">		btn3.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L162">		btn3.setBounds(347, 285, 60, 45);</span>
+<span class="nc" id="L163">		btn3.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L171">				skrivtal(3);</span>
+
+<span class="nc" id="L173">			}</span>
+		});
+
+		/**
+		 * Skapar Button 4.
+		 */
+<span class="nc" id="L179">		JButton btn4 = new JButton(&quot;4&quot;);</span>
+<span class="nc" id="L180">		btn4.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L181">		btn4.setBounds(196, 225, 60, 45);</span>
+<span class="nc" id="L182">		btn4.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L191">				skrivtal(4);</span>
+<span class="nc" id="L192">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button 5.
+		 */
+<span class="nc" id="L199">		JButton btn5 = new JButton(&quot;5&quot;);</span>
+<span class="nc" id="L200">		btn5.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L201">		btn5.setBounds(273, 225, 60, 45);</span>
+<span class="nc" id="L202">		btn5.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L210">				skrivtal(5);</span>
+<span class="nc" id="L211">			}</span>
+		});
+
+		/**
+		 * Skapar Button 6.
+		 */
+<span class="nc" id="L217">		JButton btn6 = new JButton(&quot;6&quot;);</span>
+<span class="nc" id="L218">		btn6.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L219">		btn6.setBounds(347, 224, 60, 45);</span>
+<span class="nc" id="L220">		btn6.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L227">				skrivtal(6);</span>
+<span class="nc" id="L228">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button 7.
+		 */
+<span class="nc" id="L235">		JButton btn7 = new JButton(&quot;7&quot;);</span>
+<span class="nc" id="L236">		btn7.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L237">		btn7.setBounds(196, 168, 60, 45);</span>
+<span class="nc" id="L238">		btn7.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L245">				skrivtal(7);</span>
+<span class="nc" id="L246">			}</span>
+		});
+
+		/**
+		 * Skapar Button 8.
+		 */
+<span class="nc" id="L252">		JButton btn8 = new JButton(&quot;8&quot;);</span>
+<span class="nc" id="L253">		btn8.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L254">		btn8.setBounds(273, 168, 60, 45);</span>
+<span class="nc" id="L255">		btn8.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L264">				skrivtal(8);</span>
+<span class="nc" id="L265">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button 9.
+		 */
+<span class="nc" id="L272">		JButton btn9 = new JButton(&quot;9&quot;);</span>
+<span class="nc" id="L273">		btn9.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L274">		btn9.setBounds(347, 168, 60, 45);</span>
+<span class="nc" id="L275">		btn9.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den metod anropa metod skanntal från Class
+			 * CalculatorActionListener.
+			 * 
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L284">				skrivtal(9);</span>
+<span class="nc" id="L285">			}</span>
+		});
+
+		/**
+		 * Skapar Button Equal =
+		 */
+<span class="nc" id="L291">		JButton btnEquals = new JButton(&quot;=&quot;);</span>
+<span class="nc" id="L292">		btnEquals.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L293">		btnEquals.setBounds(347, 349, 60, 45);</span>
+<span class="nc" id="L294">		btnEquals.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den method anropar method equal från class
+			 * CalculatorActionListener.
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L302">				equal(Operation);</span>
+<span class="nc" id="L303">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button Plus +
+		 */
+
+<span class="nc" id="L311">		JButton btnPlus = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L312">		btnPlus.setBounds(422, 167, 60, 45);</span>
+<span class="nc" id="L313">		btnPlus.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method skapar ett object och sedan anropar method
+			 * BasicOperation från class CalculatorActionListener
+			 * 
+			 * 
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L325">				BasicOperation('+');</span>
+
+<span class="nc" id="L327">			}</span>
+
+		});
+
+<span class="nc" id="L331">		btnPlus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+
+		/**
+		 * Skapar Button Minus -
+		 */
+<span class="nc" id="L336">		JButton btnMinus = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L337">		btnMinus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L338">		btnMinus.setBounds(422, 224, 60, 45);</span>
+<span class="nc" id="L339">		btnMinus.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method BasicOperation från class
+			 * CalculatorActionListener
+			 * 
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L350">				BasicOperation('-');</span>
+<span class="nc" id="L351">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button Multiply *
+		 */
+
+<span class="nc" id="L359">		JButton btnMultiply = new JButton(&quot;*&quot;);</span>
+<span class="nc" id="L360">		btnMultiply.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L361">		btnMultiply.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L362">		btnMultiply.setBounds(422, 283, 60, 45);</span>
+<span class="nc" id="L363">		btnMultiply.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method BasicOperation från class
+			 * CalculatorActionListener
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L373">				BasicOperation('*');</span>
+
+<span class="nc" id="L375">			}</span>
+		});
+
+		/**
+		 * Skapar Button Division /
+		 */
+<span class="nc" id="L381">		JButton btnDivision = new JButton(&quot;\uF0B8&quot;);</span>
+<span class="nc" id="L382">		btnDivision.setBounds(422, 347, 60, 45);</span>
+<span class="nc" id="L383">		btnDivision.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * 
+			 * 
+			 * Den method anropar method BasicOperation från class
+			 * CalculatorActionListener
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L394">				BasicOperation('/');</span>
+
+<span class="nc" id="L396">			}</span>
+		});
+<span class="nc" id="L398">		btnDivision.setFont(new Font(&quot;Symbol&quot;, Font.BOLD, 21));</span>
+
+		/**
+		 * Skapar Button Cotan.
+		 */
+<span class="nc" id="L403">		JButton btnxx = new JButton(&quot;X^2&quot;);</span>
+<span class="nc" id="L404">		btnxx.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L405">		btnxx.setBounds(107, 350, 76, 42);</span>
+<span class="nc" id="L406">		btnxx.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L407">		btnxx.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent arg0) {
+
+<span class="nc" id="L417">				AdvancedOperation(5);</span>
+
+<span class="nc" id="L419">			}</span>
+		});
+
+		/**
+		 * Skapar Button Sin
+		 */
+<span class="nc" id="L425">		JButton btnSin = new JButton(&quot;sin&quot;);</span>
+<span class="nc" id="L426">		btnSin.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L427">		btnSin.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L428">		btnSin.setBounds(107, 168, 76, 42);</span>
+<span class="nc" id="L429">		btnSin.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L439">				AdvancedOperation(2);</span>
+
+<span class="nc" id="L441">			}</span>
+		});
+
+		/**
+		 * Skapar Button exp
+		 */
+<span class="nc" id="L447">		JButton btnExp = new JButton(&quot;exp&quot;);</span>
+<span class="nc" id="L448">		btnExp.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L449">		btnExp.setAlignmentY(Component.BOTTOM_ALIGNMENT);</span>
+<span class="nc" id="L450">		btnExp.setBounds(107, 115, 76, 42);</span>
+<span class="nc" id="L451">		btnExp.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den method anropar method AdvancedOperation
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent arg0) {
+
+<span class="nc" id="L459">				AdvancedOperation(1);</span>
+
+<span class="nc" id="L461">			}</span>
+		});
+
+		/**
+		 * Skapar Button Backspace
+		 */
+<span class="nc" id="L467">		JButton btnDel = new JButton(&quot;&lt;&quot;);</span>
+<span class="nc" id="L468">		btnDel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L469">		btnDel.addActionListener(new ActionListener() {</span>
+			/*
+			 * Den method anropar method Backspace från class
+			 * calculatorActionListener.
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent arg0) {
+
+<span class="nc" id="L480">				Backspace();</span>
+<span class="nc" id="L481">			}</span>
+		});
+<span class="nc" id="L483">		btnDel.setAlignmentY(Component.BOTTOM_ALIGNMENT);</span>
+<span class="nc" id="L484">		btnDel.setBounds(273, 114, 60, 45);</span>
+
+		/**
+		 * Skapar Button PI.
+		 */
+
+<span class="nc" id="L490">		JButton btnPi = new JButton(&quot;\u213C&quot;);</span>
+<span class="nc" id="L491">		btnPi.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 20));</span>
+<span class="nc" id="L492">		btnPi.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L493">		btnPi.setBounds(22, 286, 70, 42);</span>
+<span class="nc" id="L494">		btnPi.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation och skicka kode 8 som
+			 * är advance operation PI
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L502">				AdvancedOperation(8);</span>
+
+<span class="nc" id="L504">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button Sqrt
+		 */
+<span class="nc" id="L511">		JButton btnSqr = new JButton(&quot;\u221A&quot;);</span>
+<span class="nc" id="L512">		btnSqr.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L513">		btnSqr.setBounds(22, 225, 70, 42);</span>
+<span class="nc" id="L514">		btnSqr.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation och skicka kode 7 som
+			 * är advance operation sqrt
+			 * 
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L524">				AdvancedOperation(7);</span>
+
+<span class="nc" id="L526">			}</span>
+
+		});
+
+<span class="nc" id="L530">		btnSqr.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+
+		/**
+		 * Skapar Button Cos
+		 */
+<span class="nc" id="L535">		JButton btnCos = new JButton(&quot;cos&quot;);</span>
+<span class="nc" id="L536">		btnCos.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L537">		btnCos.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L538">		btnCos.setBounds(107, 225, 76, 42);</span>
+<span class="nc" id="L539">		btnCos.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation och skicka kode 3 som
+			 * är advance operation cos
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L548">				AdvancedOperation(3);</span>
+
+<span class="nc" id="L550">			}</span>
+
+		});
+
+		/**
+		 * Skapar Button Modulus %
+		 */
+<span class="nc" id="L557">		JButton btnModulus = new JButton(&quot;%&quot;);</span>
+<span class="nc" id="L558">		btnModulus.setAlignmentY(Component.BOTTOM_ALIGNMENT);</span>
+<span class="nc" id="L559">		btnModulus.setBounds(22, 115, 70, 42);</span>
+<span class="nc" id="L560">		btnModulus.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * 
+			 * Den method anropar method BasicOperation från class
+			 * CalculatorActionListener
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L570">				BasicOperation('%');</span>
+
+<span class="nc" id="L572">			}</span>
+		});
+<span class="nc" id="L574">		btnModulus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+
+		/**
+		 * Skapar Button e
+		 */
+
+<span class="nc" id="L580">		JButton btnE = new JButton(&quot;e&quot;);</span>
+<span class="nc" id="L581">		btnE.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L582">		btnE.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L583">		btnE.setBounds(22, 350, 70, 42);</span>
+<span class="nc" id="L584">		btnE.addActionListener(new ActionListener() {</span>
+			/**
+			 * Den method anropar method AdvancedOperation och skicka kode 9 som
+			 * är advance operation e.
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L592">				AdvancedOperation(9);</span>
+
+<span class="nc" id="L594">			}</span>
+		});
+
+		/**
+		 * Skapar Button point
+		 */
+<span class="nc" id="L600">		JButton btnDot = new JButton(&quot;.&quot;);</span>
+<span class="nc" id="L601">		btnDot.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L602">		btnDot.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * 
+			 * Den method anropar method point från class
+			 * calculatorActionListener.
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L613">				point();</span>
+
+<span class="nc" id="L615">			}</span>
+		});
+<span class="nc" id="L617">		btnDot.setBounds(198, 114, 60, 45);</span>
+
+		/**
+		 * Skapar Button tan
+		 */
+
+<span class="nc" id="L623">		JButton btnTan = new JButton(&quot;tan&quot;);</span>
+<span class="nc" id="L624">		btnTan.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L625">		btnTan.setBounds(107, 286, 76, 42);</span>
+<span class="nc" id="L626">		btnTan.addActionListener(new ActionListener() {</span>
+
+			/**
+			 * Den method anropar method AdvancedOperation och skicka kode 4 som
+			 * är advance operation tan.
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L635">				AdvancedOperation(4);</span>
+
+<span class="nc" id="L637">			}</span>
+		});
+<span class="nc" id="L639">		btnTan.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+
+		/**
+		 * Skapar Button logaritmer
+		 */
+
+<span class="nc" id="L645">		JButton btn26 = new JButton(&quot;log&quot;);</span>
+<span class="nc" id="L646">		btn26.setBounds(220, 176, 0, 29);</span>
+<span class="nc" id="L647">		JButton btnLog = new JButton(&quot;log&quot;);</span>
+<span class="nc" id="L648">		btnLog.setHorizontalTextPosition(SwingConstants.CENTER);</span>
+<span class="nc" id="L649">		btnLog.setBounds(22, 168, 70, 42);</span>
+<span class="nc" id="L650">		btnLog.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method AdvancedOperation och skickar kode 6
+			 * som är advanceoperation log.
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L659">				AdvancedOperation(6);</span>
+
+<span class="nc" id="L661">			}</span>
+		});
+<span class="nc" id="L663">		btnLog.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+
+		/**
+		 * Skapar Button Clean.
+		 */
+<span class="nc" id="L668">		JButton btnClear = new JButton(&quot;AC&quot;);</span>
+<span class="nc" id="L669">		btnClear.setAlignmentY(Component.BOTTOM_ALIGNMENT);</span>
+<span class="nc" id="L670">		btnClear.setBounds(348, 114, 134, 45);</span>
+<span class="nc" id="L671">		btnClear.addActionListener(new ActionListener() {</span>
+			/**
+			 * 
+			 * Den method anropar method clear från class
+			 * calculatoraActionListener.
+			 * 
+			 */
+
+			public void actionPerformed(ActionEvent e) {
+
+<span class="nc" id="L681">				clear();</span>
+<span class="nc" id="L682">			}</span>
+		});
+
+<span class="nc" id="L685">		btnClear.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+		/**
+		 * Skapar txtDisplay 1
+		 * 
+		 */
+
+<span class="nc" id="L691">		txtDisplay1 = new JTextField();</span>
+<span class="nc" id="L692">		txtDisplay1.setBounds(22, 16, 460, 42);</span>
+<span class="nc" id="L693">		txtDisplay1.setEditable(false);</span>
+<span class="nc" id="L694">		txtDisplay1.setHorizontalAlignment(SwingConstants.RIGHT);</span>
+<span class="nc" id="L695">		txtDisplay1.setBackground(SystemColor.control);</span>
+<span class="nc" id="L696">		txtDisplay1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L697">		txtDisplay1.setColumns(15);</span>
+<span class="nc" id="L698">		txtDisplay1.setForeground(Color.RED);</span>
+		/**
+		 * Skapar txtDisplay 2
+		 * 
+		 */
+
+<span class="nc" id="L704">		txtDisplay2 = new JTextField();</span>
+<span class="nc" id="L705">		txtDisplay2.setBounds(22, 57, 460, 42);</span>
+<span class="nc" id="L706">		txtDisplay2.setEditable(false);</span>
+<span class="nc" id="L707">		txtDisplay2.setBackground(Color.WHITE);</span>
+<span class="nc" id="L708">		txtDisplay2.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 20));</span>
+<span class="nc" id="L709">		txtDisplay2.setHorizontalAlignment(SwingConstants.RIGHT);</span>
+<span class="nc" id="L710">		txtDisplay2.setColumns(15);</span>
+
+		/**
+		 * Skapar Layout
+		 * 
+		 */
+<span class="nc" id="L716">		contentPane.setLayout(null);</span>
+		/**
+		 * lägga till Buttons
+		 * 
+		 */
+
+<span class="nc" id="L722">		contentPane.add(btnSin);</span>
+<span class="nc" id="L723">		contentPane.add(btnTan);</span>
+<span class="nc" id="L724">		contentPane.add(btnCos);</span>
+<span class="nc" id="L725">		contentPane.add(btnxx);</span>
+
+<span class="nc" id="L727">		contentPane.add(btnE);</span>
+<span class="nc" id="L728">		contentPane.add(btnPi);</span>
+<span class="nc" id="L729">		contentPane.add(btnLog);</span>
+<span class="nc" id="L730">		contentPane.add(btnSqr);</span>
+<span class="nc" id="L731">		contentPane.add(btnExp);</span>
+
+<span class="nc" id="L733">		contentPane.add(btn0);</span>
+<span class="nc" id="L734">		contentPane.add(btn1);</span>
+<span class="nc" id="L735">		contentPane.add(btn2);</span>
+<span class="nc" id="L736">		contentPane.add(btn3);</span>
+<span class="nc" id="L737">		contentPane.add(btn4);</span>
+<span class="nc" id="L738">		contentPane.add(btn5);</span>
+<span class="nc" id="L739">		contentPane.add(btn6);</span>
+<span class="nc" id="L740">		contentPane.add(btn7);</span>
+<span class="nc" id="L741">		contentPane.add(btn8);</span>
+<span class="nc" id="L742">		contentPane.add(btn9);</span>
+
+<span class="nc" id="L744">		contentPane.add(btnEquals);</span>
+<span class="nc" id="L745">		contentPane.add(btnPlus);</span>
+<span class="nc" id="L746">		contentPane.add(btnDivision);</span>
+<span class="nc" id="L747">		contentPane.add(btnMultiply);</span>
+<span class="nc" id="L748">		contentPane.add(btnMinus);</span>
+<span class="nc" id="L749">		contentPane.add(btnModulus);</span>
+
+<span class="nc" id="L751">		contentPane.add(btnClear);</span>
+<span class="nc" id="L752">		contentPane.add(btnDel);</span>
+<span class="nc" id="L753">		contentPane.add(btnDot);</span>
+		/**
+		 * lägga till txtDisplay1 och txtDisplay2
+		 * 
+		 */
+
+<span class="nc" id="L759">		contentPane.add(txtDisplay2);</span>
+<span class="nc" id="L760">		contentPane.add(txtDisplay1);</span>
+
+		/**
+		 * den method skriver + eller - till nummer. efter varje klick byta
+		 * värde av boolean b om bvar true skriver + annars skriver - i
+		 * txtDisplay2.
+		 * 
+		 */
+
+<span class="nc" id="L769">		JButton btnPlusMinus = new JButton(&quot;+/-&quot;);</span>
+<span class="nc" id="L770">		btnPlusMinus.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+
+<span class="nc" id="L773">				plusMinus();</span>
+
+<span class="nc" id="L775">			}</span>
+		});
+<span class="nc" id="L777">		btnPlusMinus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L778">		btnPlusMinus.setBounds(271, 350, 60, 45);</span>
+<span class="nc" id="L779">		contentPane.add(btnPlusMinus);</span>
+<span class="nc" id="L780">	}</span>
+
+	/**
+	 * Den method tar en integer parameter och skriver nummer i txtdisplay2.
+	 * 
+	 * @param number
+	 */
+	public void skrivtal(int number) {
+
+<span class="nc" id="L789">		st = txtDisplay2.getText();</span>
+
+<span class="nc bnc" id="L791" title="All 11 branches missed.">		switch (number) {</span>
+		case (1):
+
+<span class="nc bnc" id="L794" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L796">				txtDisplay2.setText(txtDisplay2.getText() + &quot;1&quot;);</span>
+			} else {
+<span class="nc" id="L798">				txtDisplay2.setText(txtDisplay2.getText() + &quot;1&quot;);</span>
+
+			}
+<span class="nc" id="L801">			break;</span>
+		case (2):
+
+<span class="nc bnc" id="L804" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L806">				txtDisplay2.setText(txtDisplay2.getText() + &quot;2&quot;);</span>
+			} else {
+<span class="nc" id="L808">				txtDisplay2.setText(txtDisplay2.getText() + &quot;2&quot;);</span>
+
+			}
+<span class="nc" id="L811">			break;</span>
+		case (3):
+
+<span class="nc bnc" id="L814" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L816">				txtDisplay2.setText(txtDisplay2.getText() + &quot;3&quot;);</span>
+			} else {
+<span class="nc" id="L818">				txtDisplay2.setText(txtDisplay2.getText() + &quot;3&quot;);</span>
+
+			}
+<span class="nc" id="L821">			break;</span>
+		case (4):
+
+<span class="nc bnc" id="L824" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L826">				txtDisplay2.setText(txtDisplay2.getText() + &quot;4&quot;);</span>
+			} else {
+<span class="nc" id="L828">				txtDisplay2.setText(txtDisplay2.getText() + &quot;4&quot;);</span>
+
+			}
+<span class="nc" id="L831">			break;</span>
+		case (5):
+
+<span class="nc bnc" id="L834" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L836">				txtDisplay2.setText(txtDisplay2.getText() + &quot;5&quot;);</span>
+			} else {
+<span class="nc" id="L838">				txtDisplay2.setText(txtDisplay2.getText() + &quot;5&quot;);</span>
+
+			}
+<span class="nc" id="L841">			break;</span>
+		case (6):
+
+<span class="nc bnc" id="L844" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L846">				txtDisplay2.setText(txtDisplay2.getText() + &quot;6&quot;);</span>
+			} else {
+<span class="nc" id="L848">				txtDisplay2.setText(txtDisplay2.getText() + &quot;6&quot;);</span>
+
+			}
+<span class="nc" id="L851">			break;</span>
+		case (7):
+
+<span class="nc bnc" id="L854" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L856">				txtDisplay2.setText(txtDisplay2.getText() + &quot;7&quot;);</span>
+			} else {
+<span class="nc" id="L858">				txtDisplay2.setText(txtDisplay2.getText() + &quot;7&quot;);</span>
+			}
+<span class="nc" id="L860">			break;</span>
+		case (8):
+
+<span class="nc bnc" id="L863" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L865">				txtDisplay2.setText(txtDisplay2.getText() + &quot;8&quot;);</span>
+			} else {
+<span class="nc" id="L867">				txtDisplay2.setText(txtDisplay2.getText() + &quot;8&quot;);</span>
+
+			}
+<span class="nc" id="L870">			break;</span>
+		case (9):
+
+<span class="nc bnc" id="L873" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L875">				txtDisplay2.setText(txtDisplay2.getText() + &quot;9&quot;);</span>
+			} else {
+<span class="nc" id="L877">				txtDisplay2.setText(txtDisplay2.getText() + &quot;9&quot;);</span>
+
+			}
+<span class="nc" id="L880">			break;</span>
+		case (0):
+
+<span class="nc bnc" id="L883" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+
+<span class="nc" id="L885">				txtDisplay2.setText(&quot;0&quot;);</span>
+			} else {
+<span class="nc" id="L887">				txtDisplay2.setText(txtDisplay2.getText() + &quot;0&quot;);</span>
+
+			}
+<span class="nc" id="L890">			break;</span>
+		default:
+<span class="nc" id="L892">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L893">			txtDisplay2.setText(&quot;&quot;);</span>
+
+		}
+
+<span class="nc" id="L897">	}</span>
+
+	/**
+	 * 
+	 * Den method tar char op och använda ett switch case föratt välja rätt
+	 * BasicOperation sedan i varje statment , den tar value av double
+	 * FirstNumber från txtDisplay2 och lägga till operation sedan det skriver i
+	 * txtDisplay1.
+	 *
+	 * @param op
+	 *            character
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+
+	public void BasicOperation(char op) {
+
+<span class="nc bnc" id="L916" title="All 4 branches missed.">		if (txtDisplay1.getText().length() == 0 &amp;&amp; txtDisplay2.getText().length() == 0) {</span>
+
+<span class="nc" id="L918">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L919">			txtDisplay2.setText(&quot;&quot;);</span>
+<span class="nc bnc" id="L920" title="All 4 branches missed.">		} else if (txtDisplay1.getText().length() == 0 &amp;&amp; txtDisplay2.getText().length() &gt; 0) {</span>
+
+<span class="nc" id="L922">			txtDisplay1.setText(txtDisplay2.getText());</span>
+
+		}
+<span class="nc" id="L925">		st = txtDisplay2.getText();</span>
+<span class="nc bnc" id="L926" title="All 2 branches missed.">		if (st.length() &gt; 0) {</span>
+
+<span class="nc bnc" id="L928" title="All 6 branches missed.">			switch (op) {</span>
+			case '+':
+<span class="nc" id="L930">				FirstNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L931">				txtDisplay1.setText(FirstNumber + &quot; + &quot;);</span>
+<span class="nc" id="L932">				Operation = 1; // plus</span>
+
+<span class="nc" id="L934">				txtDisplay2.setText(&quot;&quot;);</span>
+
+<span class="nc" id="L936">				break;</span>
+			case '-':
+<span class="nc" id="L938">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L940">				txtDisplay1.setText(FirstNumber + &quot; - &quot;);</span>
+<span class="nc" id="L941">				Operation = 2; // minus</span>
+<span class="nc" id="L942">				txtDisplay2.setText(&quot;&quot;);</span>
+
+<span class="nc" id="L944">				break;</span>
+			case '*':
+<span class="nc" id="L946">				FirstNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L947">				txtDisplay1.setText(FirstNumber + &quot; * &quot;);</span>
+<span class="nc" id="L948">				Operation = 3; // Multiply</span>
+<span class="nc" id="L949">				txtDisplay2.setText(&quot;&quot;);</span>
+
+<span class="nc" id="L951">				break;</span>
+			case '/':
+<span class="nc" id="L953">				FirstNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L954">				txtDisplay1.setText(FirstNumber + &quot; / &quot;);</span>
+<span class="nc" id="L955">				Operation = 4; // Division</span>
+<span class="nc" id="L956">				txtDisplay2.setText(&quot;&quot;);</span>
+
+<span class="nc" id="L958">				break;</span>
+			case '%':
+<span class="nc" id="L960">				FirstNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L961">				txtDisplay1.setText(FirstNumber + &quot; % &quot;);</span>
+<span class="nc" id="L962">				Operation = 5; // Modulus opretion</span>
+<span class="nc" id="L963">				txtDisplay2.setText(&quot;&quot;);</span>
+
+<span class="nc" id="L965">				break;</span>
+			default:
+<span class="nc" id="L967">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			}
+		}
+
+<span class="nc" id="L972">	}</span>
+
+	/**
+	 * Den method anropar 4 metoder från class CalculatorBasicOperations och ett
+	 * method från class CalculatorAdvancedOperations. Den kontrolerar vilken
+	 * opreation påverkas sedan det räknar resultaten och skriver i txtDisplay2.
+	 * 
+	 * Operation =1 plus ,Operation =2 minus, Operation =3 multiply, Operation
+	 * =4 division , Operation=5 Modulus
+	 * 
+	 * 
+	 * @param Operation
+	 *            integer
+	 * 
+	 * 
+	 */
+
+	public void equal(int Operation) {
+
+<span class="nc" id="L991">		CalculatorBasicOperations cb = new CalculatorBasicOperations();</span>
+<span class="nc" id="L992">		CalculatorAdvancedOperations ca = new CalculatorAdvancedOperations();</span>
+
+<span class="nc" id="L994">		st = txtDisplay2.getText();</span>
+
+<span class="nc bnc" id="L996" title="All 6 branches missed.">		if ((FirstNumber == 0 &amp;&amp; SecondNumber == 0) || (st.length() == 0)) {</span>
+
+<span class="nc" id="L998">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L999">			txtDisplay2.setText(&quot;&quot;);</span>
+<span class="nc" id="L1000">			Operation = 0;</span>
+
+		}
+
+<span class="nc bnc" id="L1004" title="All 6 branches missed.">		switch (Operation) {</span>
+
+		case 1:
+<span class="nc" id="L1007">			SecondNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L1008">			txtDisplay1.setText(FirstNumber + &quot; + &quot; + SecondNumber);</span>
+<span class="nc" id="L1009">			txtDisplay2.setText(&quot;&quot; + cb.addition(FirstNumber, SecondNumber));</span>
+<span class="nc" id="L1010">			FirstNumber = 0;</span>
+<span class="nc" id="L1011">			SecondNumber = 0;</span>
+<span class="nc" id="L1012">			Operation = 0;</span>
+<span class="nc" id="L1013">			break;</span>
+		case 2:
+<span class="nc" id="L1015">			SecondNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L1016">			txtDisplay1.setText(FirstNumber + &quot; - &quot; + SecondNumber);</span>
+<span class="nc" id="L1017">			txtDisplay2.setText(&quot;&quot; + cb.subtraction(FirstNumber, SecondNumber));</span>
+<span class="nc" id="L1018">			FirstNumber = 0;</span>
+<span class="nc" id="L1019">			SecondNumber = 0;</span>
+<span class="nc" id="L1020">			Operation = 0;</span>
+<span class="nc" id="L1021">			break;</span>
+		case 3:
+<span class="nc" id="L1023">			SecondNumber = Double.parseDouble(st);</span>
+<span class="nc" id="L1024">			txtDisplay1.setText(FirstNumber + &quot; * &quot; + SecondNumber);</span>
+<span class="nc" id="L1025">			txtDisplay2.setText(&quot;&quot; + cb.multiplikation(FirstNumber, SecondNumber));</span>
+<span class="nc" id="L1026">			FirstNumber = 0;</span>
+<span class="nc" id="L1027">			SecondNumber = 0;</span>
+<span class="nc" id="L1028">			Operation = 0;</span>
+<span class="nc" id="L1029">			break;</span>
+		case 4:
+<span class="nc" id="L1031">			SecondNumber = Double.parseDouble(st);</span>
+<span class="nc bnc" id="L1032" title="All 2 branches missed.">			if (SecondNumber == 0) {</span>
+<span class="nc" id="L1033">				JOptionPane.showMessageDialog(null, &quot; You can not perform a division by zero&quot;);</span>
+<span class="nc" id="L1034">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1035">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+<span class="nc" id="L1038">				txtDisplay1.setText(FirstNumber + &quot; / &quot; + SecondNumber);</span>
+<span class="nc" id="L1039">				txtDisplay2.setText(&quot;&quot; + cb.dividera(FirstNumber, SecondNumber));</span>
+			}
+<span class="nc" id="L1041">			FirstNumber = 0;</span>
+<span class="nc" id="L1042">			SecondNumber = 0;</span>
+<span class="nc" id="L1043">			Operation = 0;</span>
+<span class="nc" id="L1044">			break;</span>
+		case 5:
+<span class="nc" id="L1046">			SecondNumber = Double.parseDouble(st);</span>
+<span class="nc bnc" id="L1047" title="All 2 branches missed.">			if (SecondNumber == 0) {</span>
+<span class="nc" id="L1048">				JOptionPane.showMessageDialog(null, &quot; You can not perform a division by zero&quot;);</span>
+<span class="nc" id="L1049">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1050">				txtDisplay2.setText(&quot;&quot;);</span>
+			} else {
+<span class="nc" id="L1052">				txtDisplay1.setText(FirstNumber + &quot; % &quot; + SecondNumber);</span>
+<span class="nc" id="L1053">				txtDisplay2.setText(&quot;&quot; + ca.modulus(FirstNumber, SecondNumber));</span>
+			}
+<span class="nc" id="L1055">			FirstNumber = 0;</span>
+<span class="nc" id="L1056">			SecondNumber = 0;</span>
+<span class="nc" id="L1057">			Operation = 0;</span>
+<span class="nc" id="L1058">			break;</span>
+
+		default:
+<span class="nc" id="L1061">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1062">			txtDisplay2.setText(&quot;&quot;);</span>
+
+		}
+
+<span class="nc" id="L1066">	}</span>
+
+	/**
+	 * 
+	 * 
+	 * Den method tar integer koder från AdvOperation och använda ett switch
+	 * case föratt välja rätt AdvancedOperation sedan i varje statment tar value
+	 * av double FirstNumber från txtDisplay2 och anroppar methoden från class
+	 * AdvancedOprations. AdvOperation 1 är exp, AdvOperation 2 är sin,
+	 * AdvOperation 3 är cos, AdvOperation 4 är tan, AdvOperation 5 är x^2,
+	 * AdvOperation 6 är log, AdvOperation 7 är sqrt, AdvOperation 8 är pi,
+	 * AdvOperation 9 är e,
+	 * 
+	 *
+	 * @param AdvOperation
+	 *            integar
+	 * 
+	 * 
+	 * 
+	 */
+
+	public void AdvancedOperation(int AdvOperation) {
+
+<span class="nc" id="L1089">		CalculatorAdvancedOperations cao = new CalculatorAdvancedOperations();</span>
+<span class="nc" id="L1090">		st = txtDisplay2.getText();</span>
+		// ad=AdvOperation;
+<span class="nc bnc" id="L1092" title="All 10 branches missed.">		switch (AdvOperation) {</span>
+		case (1):
+<span class="nc bnc" id="L1094" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1095">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1096">				txtDisplay2.setText(&quot;&quot;);</span>
+				// ad=AdvOperation;
+
+			} else {
+
+<span class="nc" id="L1101">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1103">				txtDisplay2.setText(&quot;&quot; + cao.EXP(FirstNumber));</span>
+<span class="nc" id="L1104">				txtDisplay1.setText(&quot;exp(&quot; + FirstNumber + &quot;)&quot;);</span>
+<span class="nc" id="L1105">				FirstNumber = 0;</span>
+			}
+<span class="nc" id="L1107">			break;</span>
+		case (2):
+<span class="nc bnc" id="L1109" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1110">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1111">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1115">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1117">				txtDisplay2.setText(&quot;&quot; + cao.sin(FirstNumber));</span>
+<span class="nc" id="L1118">				txtDisplay1.setText(&quot;sin (&quot; + FirstNumber + &quot;)&quot;);</span>
+<span class="nc" id="L1119">				FirstNumber = 0;</span>
+			}
+
+<span class="nc" id="L1122">			break;</span>
+		case (3):
+
+<span class="nc bnc" id="L1125" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1126">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1127">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1131">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1133">				txtDisplay2.setText(&quot;&quot; + cao.cos(FirstNumber));</span>
+<span class="nc" id="L1134">				txtDisplay1.setText(&quot;cos ( &quot; + FirstNumber + &quot; )&quot;);</span>
+<span class="nc" id="L1135">				FirstNumber = 0;</span>
+			}
+
+<span class="nc" id="L1138">			break;</span>
+		case (4):
+<span class="nc bnc" id="L1140" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1141">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1142">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1146">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1148">				txtDisplay2.setText(&quot;&quot; + cao.tan(FirstNumber));</span>
+<span class="nc" id="L1149">				txtDisplay1.setText(&quot;tan (&quot; + FirstNumber + &quot;)&quot;);</span>
+<span class="nc" id="L1150">				FirstNumber = 0;</span>
+			}
+
+<span class="nc" id="L1153">			break;</span>
+		case (5):
+<span class="nc bnc" id="L1155" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1156">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1157">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1161">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1163">				txtDisplay2.setText(&quot;&quot; + cao.xx(FirstNumber));</span>
+<span class="nc" id="L1164">				txtDisplay1.setText(&quot;&quot; + FirstNumber + &quot; ^2&quot;);</span>
+<span class="nc" id="L1165">				FirstNumber = 0;</span>
+			}
+
+<span class="nc" id="L1168">			break;</span>
+		case (6):
+<span class="nc bnc" id="L1170" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1171">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1172">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1176">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc bnc" id="L1178" title="All 2 branches missed.">				if (FirstNumber &gt; 0) {</span>
+<span class="nc" id="L1179">					txtDisplay2.setText(&quot;&quot; + cao.LOG(FirstNumber));</span>
+<span class="nc" id="L1180">					txtDisplay1.setText(&quot;log (&quot; + FirstNumber + &quot;)&quot;);</span>
+
+				} else {
+
+<span class="nc" id="L1184">					txtDisplay1.setText(&quot;log ( &quot; + FirstNumber + &quot; )&quot;);</span>
+<span class="nc" id="L1185">					txtDisplay2.setText(&quot;&quot;);</span>
+<span class="nc" id="L1186">					JOptionPane.showMessageDialog(null, &quot; Result undefined&quot;);</span>
+
+<span class="nc" id="L1188">					txtDisplay1.setText(&quot;&quot;);</span>
+				}
+<span class="nc" id="L1190">				FirstNumber = 0;</span>
+			}
+<span class="nc" id="L1192">			break;</span>
+		case (7):
+
+<span class="nc bnc" id="L1195" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1196">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1197">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1201">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc bnc" id="L1203" title="All 4 branches missed.">				if (FirstNumber &gt; 0 || FirstNumber == 0) {</span>
+<span class="nc" id="L1204">					txtDisplay2.setText(&quot;&quot; + cao.sqr(FirstNumber));</span>
+<span class="nc" id="L1205">					txtDisplay1.setText(&quot;sqr ( &quot; + FirstNumber + &quot; )&quot;);</span>
+				} else {
+
+<span class="nc" id="L1208">					txtDisplay1.setText(&quot;sqr ( &quot; + FirstNumber + &quot; )&quot;);</span>
+<span class="nc" id="L1209">					txtDisplay2.setText(&quot;&quot;);</span>
+<span class="nc" id="L1210">					JOptionPane.showMessageDialog(null, &quot; Result undefined&quot;);</span>
+<span class="nc" id="L1211">					txtDisplay1.setText(&quot;&quot;);</span>
+				}
+<span class="nc" id="L1213">				FirstNumber = 0;</span>
+			}
+<span class="nc" id="L1215">			break;</span>
+		case (8):
+<span class="nc bnc" id="L1217" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1218">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1219">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1223">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1225">				txtDisplay2.setText(&quot;&quot; + cao.PI(FirstNumber));</span>
+<span class="nc" id="L1226">				txtDisplay1.setText(&quot;PI * &quot; + FirstNumber);</span>
+<span class="nc" id="L1227">				FirstNumber = 0;</span>
+			}
+<span class="nc" id="L1229">			break;</span>
+		case (9):
+<span class="nc bnc" id="L1231" title="All 2 branches missed.">			if (st.length() == 0) {</span>
+<span class="nc" id="L1232">				txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1233">				txtDisplay2.setText(&quot;&quot;);</span>
+
+			} else {
+
+<span class="nc" id="L1237">				FirstNumber = Double.parseDouble(st);</span>
+
+<span class="nc" id="L1239">				txtDisplay2.setText(&quot;&quot; + cao.E(FirstNumber));</span>
+<span class="nc" id="L1240">				txtDisplay1.setText(&quot;e * &quot; + FirstNumber);</span>
+<span class="nc" id="L1241">				FirstNumber = 0;</span>
+			}
+
+<span class="nc" id="L1244">			break;</span>
+		default:
+<span class="nc" id="L1246">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1247">			txtDisplay2.setText(&quot;&quot;);</span>
+
+		}
+		// }
+		// FirstNumber = 0;
+
+<span class="nc" id="L1253">	}</span>
+
+	/**
+	 * 
+	 * Den method rensa txtDisplay1 och txtDisplay2 . txtDisplay1=&quot;&quot;
+	 * txtDisplay2=&quot;&quot; FirstNumber och SecondNumber blir zero.
+	 * 
+	 */
+
+	public void clear() {
+<span class="nc" id="L1263">		txtDisplay1.setText(null);</span>
+<span class="nc" id="L1264">		txtDisplay2.setText(null);</span>
+<span class="nc" id="L1265">		FirstNumber = 0;</span>
+<span class="nc" id="L1266">		SecondNumber = 0;</span>
+
+<span class="nc" id="L1268">	}</span>
+
+	/**
+	 * 
+	 * Den method skriver en point i txtDisplay2. Först tar String st från
+	 * txtDisplay2. Räkna length av st om length var 0 skriver(0.) i txtDisplay2
+	 * . Men om length var mer än 0 , söker eftre (.)i String st. När det hittar
+	 * inte point i st sedan den skriver en point i txtDisplay2.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+
+	public void point() {
+
+<span class="nc" id="L1285">		st = txtDisplay2.getText();</span>
+
+<span class="nc bnc" id="L1287" title="All 2 branches missed.">		if (st.length() == 0) {</span>
+<span class="nc" id="L1288">			st = st + &quot;0.&quot;;</span>
+<span class="nc" id="L1289">			txtDisplay2.setText(st);</span>
+
+<span class="nc bnc" id="L1291" title="All 2 branches missed.">		} else if (!st.contains(&quot;.&quot;)) {</span>
+<span class="nc" id="L1292">			txtDisplay2.setText(txtDisplay2.getText() + &quot;.&quot;);</span>
+
+		}
+<span class="nc" id="L1295">	}</span>
+
+	/**
+	 * Den method tar length av string txtDisplay2.Om lenght var mer än 0 sedan
+	 * skappar ett objekt av StringBuilder och tabort sista character av
+	 * txtDisplay2. Det funkar som Backspace.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	public void Backspace() {
+		String store;
+<span class="nc" id="L1309">		int Length = txtDisplay2.getText().length();</span>
+
+<span class="nc bnc" id="L1311" title="All 2 branches missed.">		if (Length &gt; 0) {</span>
+<span class="nc" id="L1312">			StringBuilder back = new StringBuilder(txtDisplay2.getText());</span>
+<span class="nc" id="L1313">			back.deleteCharAt(Length - 1);</span>
+<span class="nc" id="L1314">			store = back.toString();</span>
+<span class="nc" id="L1315">			txtDisplay1.setText(&quot;&quot;);</span>
+<span class="nc" id="L1316">			txtDisplay2.setText(store);</span>
+		}
+
+<span class="nc" id="L1319">	}</span>
+
+	/**
+	 * den method skriver + eller - till nummer. efter varje klick byta värde av
+	 * boolean b om bvar true skriver + annars skriver - i txtDisplay2.
+	 * 
+	 */
+
+	public void plusMinus() {
+
+<span class="nc" id="L1329">		String s2 = txtDisplay2.getText();</span>
+
+<span class="nc bnc" id="L1331" title="All 2 branches missed.">		if (b == true) {</span>
+<span class="nc bnc" id="L1332" title="All 2 branches missed.">			if (s2.length() == 0) {</span>
+<span class="nc" id="L1333">				txtDisplay2.setText(s2);</span>
+<span class="nc" id="L1334">				b = false;</span>
+			} else {
+
+<span class="nc" id="L1337">				txtDisplay2.setText(&quot;&quot;);</span>
+<span class="nc" id="L1338">				b = false;</span>
+			}
+
+		} else {
+<span class="nc bnc" id="L1342" title="All 2 branches missed.">			if (s2.length() == 0) {</span>
+<span class="nc" id="L1343">				txtDisplay2.setText(s2 + &quot; -&quot;);</span>
+<span class="nc" id="L1344">				b = true;</span>
+			} else {
+
+<span class="nc" id="L1347">				txtDisplay2.setText(&quot; -&quot;);</span>
+<span class="nc" id="L1348">				b = true;</span>
+			}
+		}
+<span class="nc" id="L1351">	}</span>
+}
+
+/**
+ * Slut av CalculatorJF class
+ * 
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

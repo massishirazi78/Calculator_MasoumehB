@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorAdvancedOperations.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculator-MasoumehB</a> &gt; <a href="index.source.html" class="el_package">Massi_Calculator.Calculator_MasoumehB</a> &gt; <span class="el_source">CalculatorAdvancedOperations.java</span></div><h1>CalculatorAdvancedOperations.java</h1><pre class="source lang-java linenums">package Massi_Calculator.Calculator_MasoumehB;
+
+/**
+ * I den class, det fins 10 Advanced Operations methods . sin,cos,tan,modulu,log
+ * ,sqrt,Pi,e,exp ,x^2.
+ * 
+ * och implementera interface class CalculatorAdvancedOperationsInterface.
+ * 
+ * 
+ */
+
+<span class="fc" id="L12">public class CalculatorAdvancedOperations implements CalculatorAdvancedOperationsInterface {</span>
+
+	/**
+	 * Den method ta ett double parameter och räknar sine av parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from sin(FirstNumber)
+	 */
+
+	public double sin(double FirstNumber) {
+
+<span class="fc" id="L26">		return Math.sin(FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar cosine av parameter och
+	 * return ett double värde .
+	 * 
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from cos(FirstNumber)
+	 */
+
+	public double cos(double FirstNumber) {
+
+<span class="fc" id="L42">		return Math.cos(FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar tangent av parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from tan(FirstNumber)
+	 */
+
+	public double tan(double FirstNumber) {
+
+<span class="fc" id="L57">		return Math.tan(FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar x^2 och return ett double
+	 * värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from (FirstNumber*FirstNumber) eller pow(FirstNumber,2).
+	 */
+
+	public double xx(double FirstNumber) {
+
+<span class="fc" id="L72">		return Math.round(Math.pow(FirstNumber, 2));</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar sqrt av parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from sqrt(FirstNumber)
+	 */
+
+	public double sqr(double FirstNumber) {
+
+<span class="fc" id="L87">		return Math.sqrt(FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar PI gånger av parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 * @param return
+	 *            double värde av resultat from 3.14444*FirstNumber.
+	 */
+
+	public double PI(double FirstNumber) {
+
+<span class="fc" id="L103">		return Math.round((Math.PI) * FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar e gånger parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from e*FirstNumber
+	 */
+
+	public double E(double FirstNumber) {
+
+<span class="fc" id="L118">		return Math.round(Math.E * FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar exp av parameter och return
+	 * ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 * @param return
+	 *            double värde av resultat from exp(FirstNumber)
+	 */
+
+	public double EXP(double FirstNumber) {
+<span class="fc" id="L133">		return Math.exp(FirstNumber);</span>
+
+	}
+
+	/**
+	 * Den method ta ett double parameter och räknar logarithm av parameter och
+	 * return ett double värde .
+	 * 
+	 * @param FirstNumber
+	 *            double.
+	 * 
+	 *            return double värde av resultat from log(FirstNumber)
+	 */
+
+	public double LOG(double FirstNumber) {
+
+<span class="fc" id="L149">		return Math.log(FirstNumber);</span>
+	}
+
+	/**
+	 * Den method ta 2 double parameter och räknar modulus av 2 parameter och
+	 * sedan return ett double värde . result double värde av FirstNumber %
+	 * SecondNumber.
+	 * 
+	 * @param FirstNumber
+	 *            double
+	 * 
+	 * @param SecondNumber
+	 *            double
+	 * 
+	 *            return double värde av resultat from FirstNumber %
+	 *            SecondNumber.
+	 */
+
+	public double modulus(double FirstNumber, double SecondNumber) {
+
+<span class="fc" id="L169">		return FirstNumber % SecondNumber;</span>
+	}
+
+}
+/**
+ * slut av CalculatorAdvancedOperations class
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="39" passed="39">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="403" started-at="2018-12-14T10:40:51Z" finished-at="2018-12-14T10:40:51Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="403" started-at="2018-12-14T10:40:51Z" finished-at="2018-12-14T10:40:51Z">
+      <class name="Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest">
+        <test-method status="PASS" signature="testsubtractionNeg()[pri:0, instance:testsubtractionNeg(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testsubtractionNeg" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtractionNeg -->
+        <test-method status="PASS" signature="testsubtractionPos()[pri:0, instance:testsubtractionPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testsubtractionPos" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtractionPos -->
+        <test-method status="PASS" signature="testadditionPosetiv()[pri:0, instance:testadditionPosetiv(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testadditionPosetiv" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionPosetiv -->
+        <test-method status="PASS" signature="testdivideraZero()[pri:0, instance:testdivideraZero(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testdivideraZero" duration-ms="0" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdivideraZero -->
+        <test-method status="PASS" signature="testsubtraction()[pri:0, instance:testsubtraction(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testsubtraction" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsubtraction -->
+        <test-method status="PASS" signature="testadditionzero()[pri:0, instance:testadditionzero(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testadditionzero" duration-ms="0" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionzero -->
+        <test-method status="PASS" signature="testdivideraPos()[pri:0, instance:testdivideraPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testdivideraPos" duration-ms="2" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdivideraPos -->
+        <test-method status="PASS" signature="testmultiplikation()[pri:0, instance:testmultiplikation(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testmultiplikation" duration-ms="19" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplikation -->
+        <test-method status="PASS" signature="testadditionNegativ()[pri:0, instance:testadditionNegativ(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testadditionNegativ" duration-ms="2" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadditionNegativ -->
+        <test-method status="PASS" signature="testdividera()[pri:0, instance:testdividera(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testdividera" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdividera -->
+        <test-method status="PASS" signature="testmultiplikationNeg()[pri:0, instance:testmultiplikationNeg(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testmultiplikationNeg" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplikationNeg -->
+        <test-method status="PASS" signature="testmultiplikationPos()[pri:0, instance:testmultiplikationPos(Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest)]" name="testmultiplikationPos" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmultiplikationPos -->
+      </class> <!-- Massi_Calculator.Calculator_MasoumehB.calculatorBasicOperationTest -->
+      <class name="Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest">
+        <test-method status="PASS" signature="testTanZero()[pri:0, instance:testTanZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testTanZero" duration-ms="10" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanZero -->
+        <test-method status="PASS" signature="testExpZero()[pri:0, instance:testExpZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testExpZero" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpZero -->
+        <test-method status="PASS" signature="testxxZero()[pri:0, instance:testxxZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testxxZero" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testxxZero -->
+        <test-method status="PASS" signature="testPIP()[pri:0, instance:testPIP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testPIP" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPIP -->
+        <test-method status="PASS" signature="testPiN()[pri:0, instance:testPiN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testPiN" duration-ms="8" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPiN -->
+        <test-method status="PASS" signature="testPiP()[pri:0, instance:testPiP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testPiP" duration-ms="9" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPiP -->
+        <test-method status="PASS" signature="testxxN()[pri:0, instance:testxxN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testxxN" duration-ms="14" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testxxN -->
+        <test-method status="PASS" signature="testxxP()[pri:0, instance:testxxP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testxxP" duration-ms="9" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testxxP -->
+        <test-method status="PASS" signature="testEZero()[pri:0, instance:testEZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testEZero" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEZero -->
+        <test-method status="PASS" signature="testSqrtP()[pri:0, instance:testSqrtP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testSqrtP" duration-ms="9" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtP -->
+        <test-method status="PASS" signature="testCosN()[pri:0, instance:testCosN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testCosN" duration-ms="7" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosN -->
+        <test-method status="PASS" signature="testCosP()[pri:0, instance:testCosP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testCosP" duration-ms="6" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosP -->
+        <test-method status="PASS" signature="testExpN()[pri:0, instance:testExpN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testExpN" duration-ms="5" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpN -->
+        <test-method status="PASS" signature="testExpP()[pri:0, instance:testExpP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testExpP" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpP -->
+        <test-method status="PASS" signature="testSinN()[pri:0, instance:testSinN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testSinN" duration-ms="5" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinN -->
+        <test-method status="PASS" signature="testSinP()[pri:0, instance:testSinP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testSinP" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinP -->
+        <test-method status="PASS" signature="testSinZ()[pri:0, instance:testSinZ(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testSinZ" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSinZ -->
+        <test-method status="PASS" signature="testTanN()[pri:0, instance:testTanN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testTanN" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanN -->
+        <test-method status="PASS" signature="testTanP()[pri:0, instance:testTanP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testTanP" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTanP -->
+        <test-method status="PASS" signature="testlogP()[pri:0, instance:testlogP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testlogP" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogP -->
+        <test-method status="PASS" signature="testEN()[pri:0, instance:testEN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testEN" duration-ms="14" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEN -->
+        <test-method status="PASS" signature="testEP()[pri:0, instance:testEP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testEP" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEP -->
+        <test-method status="PASS" signature="testSqrtZero()[pri:0, instance:testSqrtZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testSqrtZero" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrtZero -->
+        <test-method status="PASS" signature="testModulusN()[pri:0, instance:testModulusN(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testModulusN" duration-ms="4" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModulusN -->
+        <test-method status="PASS" signature="testModulusP()[pri:0, instance:testModulusP(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testModulusP" duration-ms="3" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModulusP -->
+        <test-method status="PASS" signature="testModulusZeroo()[pri:0, instance:testModulusZeroo(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testModulusZeroo" duration-ms="1" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModulusZeroo -->
+        <test-method status="PASS" signature="testCosZero()[pri:0, instance:testCosZero(Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest)]" name="testCosZero" duration-ms="2" started-at="2018-12-14T11:40:51Z" finished-at="2018-12-14T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCosZero -->
+      </class> <!-- Massi_Calculator.Calculator_MasoumehB.calculatorAdvanceOperationTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
